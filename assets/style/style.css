@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Centrer le texte */
+}
+
+h1 {
+    margin: 20px 0; /* Ajout d'un espacement autour du titre */
+}
+
+#map {
+    width: 100%; /* La carte occupera toute la largeur */
+    height: 400px; /* Hauteur fixe de la carte */
+}
+
+p {
+    margin: 20px; /* Espacement autour du paragraphe */
+    font-size: 18px; /* Taille du texte du paragraphe */
+}
+
+/* Format du tableau */
+#table-container {
+    max-height: 400px;              /* Hauteur maximale du conteneur */
+    overflow-y: auto;               /* Activer le défilement vertical */
+    border: 1px solid #a0a0a0;    
+    border-radius: 5px;             
+    margin: 20px 20px 20px 20px;
+}
