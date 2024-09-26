@@ -1,27 +1,28 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    text-align: center; /* Centrer le texte */
+    text-align: center;
 }
 
 h1 {
-    margin: 20px 0; /* Ajout d'un espacement autour du titre */
+    margin: 20px 0; 
 }
 
+/* Carte */
 #map {
-    width: 100%; /* La carte occupera toute la largeur */
-    height: 400px; /* Hauteur fixe de la carte */
+    width: 100%; 
+    height: 400px; 
 }
 
 p {
-    margin: 20px; /* Espacement autour du paragraphe */
-    font-size: 18px; /* Taille du texte du paragraphe */
+    margin: 20px; 
+    font-size: 18px; 
 }
 
-/* Format du tableau */
+/* Tableau */
 #table-container {
-    max-height: 400px;              /* Hauteur maximale du conteneur */
-    overflow-y: auto;               /* Activer le défilement vertical */
+    max-height: 400px;              
+    overflow-y: auto;               
     border: 1px solid #a0a0a0;    
     border-radius: 5px;             
     margin: 20px 20px 20px 20px;
