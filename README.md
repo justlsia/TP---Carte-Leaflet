@@ -1,2 +1,2 @@
 # TP---Carte-Leaflet
-Localiser des emplacements sur une carte 
+Localiser les emplacements de sacs de déjection canine à La Rochelle sur une carte 
