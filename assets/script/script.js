@@ -1,17 +1,17 @@
-// Initialiser de la carte
+// Initialiser la carte
 const map = L.map('map').setView([46.1635705075646, -1.1268395422898], 13);
 
-// Ajouter de la carte
+// Ajouter la carte
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    // Zoom maximum autorisé
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-// test
 const tableData = [];   // Stocker les emplacements
 const markers = [];     // Stocker les coodronnées du marker
 
-// Parcourir les données
+// Boucler sur les données
 datas.forEach(elementEnCours => {
     
     // Constantes 
@@ -26,7 +26,7 @@ datas.forEach(elementEnCours => {
     console.log("Latitude: " + coords[1]);
     console.log("Longitude: " + coords[0]);
 
-    // Contenu du popup
+    // Contenu de la popup
     const popupContent = `
         <b>Adresse:</b> ${Lieu}<br>
         <b>Emplacement:</b> ${Emplacement}
@@ -41,18 +41,17 @@ datas.forEach(elementEnCours => {
     }).addTo(map)
       .bindPopup(popupContent); // Lier le popup au marqueur
 
-    // TEST
     // Stocker le marqueur dans le tableau
     markers.push(marker);
 
     // Ajouter les données au tableau avec l'emplacement complet
     tableData.push({ emplacement: `${Lieu} - ${Emplacement}`, marker });
+    
 });
-
 
 // Afficher le tableau
 const table = document.createElement('table');
-// Ajouter de classes Bootstrap
+// Ajouter la classe Bootstrap au tableau
 table.className = 'table table-hover';               
 table.innerHTML = `<tbody>`; 
 
@@ -66,10 +65,10 @@ tableData.forEach((row) => {
     // Ajouter l'événement de clic
     tr.addEventListener('click', () => {
 
-        // Ouvrir le tooltip du marker correspondant
+        // Ouvrir la popup du marker correspondant
         row.marker.openPopup();
-        // Centrer la carte sur le marker
-        map.setView(row.marker.getLatLng(), 16); // Niveau de zoom souhaité
+        // Centrer la carte sur le marker sélectionné
+        map.setView(row.marker.getLatLng(), 16); // Niveau du zoom
         
     });
     
