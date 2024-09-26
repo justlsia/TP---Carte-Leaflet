@@ -1,2 +1,2 @@
 # TP---Carte-Leaflet
-Localiser les emplacements de sacs de déjection canine à La Rochelle sur une carte 
+Localiser l'emplacements des toilettes publiques à La Rochelle sur une carte 
